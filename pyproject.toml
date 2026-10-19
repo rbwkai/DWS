@@ -1,0 +1,20 @@
+[project]
+name = "dwsbench"
+version = "0.1.0"
+description = "DWS-Bench v2: minimal core pipeline for dynamic world-state stories"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["dwsbench*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

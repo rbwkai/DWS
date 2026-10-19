@@ -1,0 +1,9 @@
+# Tiny settings for a quick end-to-end check: one order, ten stories.
+root_seed: 1
+max_attempts: 50
+
+experiments:
+  smoke:
+    vary:  { T: [4] }
+    fixed: { E: 3, places: 4, D: 2, V: 1, N: 2 }
+    stories_per_cell: 10

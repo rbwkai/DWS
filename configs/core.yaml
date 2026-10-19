@@ -1,0 +1,29 @@
+# Example settings for version one. All numbers are exact whole numbers.
+root_seed: 20261018
+max_attempts: 50
+
+experiments:
+  rq1_temporal_depth:
+    vary:  { T: [2, 4, 6, 8, 12, 16] }
+    fixed: { E: 3, places: 4, D: 0, V: 0, N: 0 }
+    stories_per_cell: 50
+
+  rq2_revision:
+    vary:  { V: [0, 2, 4, 6] }
+    fixed: { E: 3, places: 4, T: 8, D: 0, N: 0 }
+    stories_per_cell: 50
+
+  rq3_state_distractors:
+    vary:  { D: [0, 4, 8, 16] }
+    fixed: { E: 3, places: 4, T: 8, V: 0, N: 0 }
+    stories_per_cell: 50
+
+  rq3_filler:
+    vary:  { N: [0, 4, 8, 16] }
+    fixed: { E: 3, places: 4, T: 8, D: 0, V: 0 }
+    stories_per_cell: 50
+
+  rq4_entity_load:
+    vary:  { E: [2, 3, 4, 5] }
+    fixed: { places: 4, T: 8, D: 0, V: 0, N: 0 }
+    stories_per_cell: 50
